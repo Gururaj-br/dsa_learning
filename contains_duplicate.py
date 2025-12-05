@@ -19,18 +19,16 @@ Recommended Time & Space Complexity
 You should aim for a solution with O(n) time and O(n) space, where n is the size of the input array.
 '''
 
-class Solution:
-    def hasDuplicate(self, nums):
-        seen = set()
-        for num in nums:
-            if num in seen:
-                return True
-            seen.add(num)
-        return False
+def hasDuplicate(self, nums):
+    seen = set()
+    for num in nums:
+        if num in seen:
+            return True
+        seen.add(num)
+    return False
 
 # Example usage:
-solution = Solution()
-print(solution.hasDuplicate([1, 2, 3, 3]))  # Output: True
-print(solution.hasDuplicate([1, 2, 3, 4]))  # Output: False
+print(hasDuplicate([1, 2, 3, 3]))  # Output: True
+print(hasDuplicate([1, 2, 3, 4]))  # Output: False
         
 

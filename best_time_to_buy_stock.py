@@ -30,21 +30,19 @@ Recommended Time & Space Complexity
 You should aim for a solution with O(n) time and O(1) space, where n is the size of the input array.
 '''
 
-class Solution:
-    def maxProfit(self, prices: list[int]):
-        min_price = prices[0]
-        profit = 0
+def maxProfit(prices):
+    min_price = prices[0]
+    profit = 0
 
-        for price in prices:
-            current_profit = price - min_price
-            profit = max(profit, current_profit)
-            min_price = min(min_price, price)
-        return profit
-    
+    for price in prices:
+        current_profit = price - min_price
+        profit = max(profit, current_profit)
+        min_price = min(min_price, price)
+    return profit
+
 # Example usage:
-solution = Solution()
-print(solution.maxProfit([10,1,5,6,7,1]))  # 6
-print(solution.maxProfit([10,8,7,5,2]))  # 0
+print(maxProfit([10,1,5,6,7,1]))  # 6
+print(maxProfit([10,8,7,5,2]))  # 0
 
 
 '''
