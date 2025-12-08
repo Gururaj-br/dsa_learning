@@ -19,7 +19,7 @@ Recommended Time & Space Complexity
 You should aim for a solution with O(n) time and O(n) space, where n is the size of the input array.
 '''
 
-def hasDuplicate(self, nums):
+def hasDuplicate(nums):
     seen = set()
     for num in nums:
         if num in seen:

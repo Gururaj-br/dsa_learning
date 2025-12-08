@@ -37,7 +37,7 @@ def search(nums, target):
         if nums[mid] > target:
             right = mid - 1
         elif nums[mid] < target:
-            left = mid +1
+            left = mid + 1
         else:
             return mid
     return -1

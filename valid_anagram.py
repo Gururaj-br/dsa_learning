@@ -24,13 +24,11 @@ Recommended Time & Space Complexity
 You should aim for a solution with O(n + m) time and O(1) space, where n is the length of the string s and m is the length of the string t.
 '''
 
-class Solution:
-    def isAnagram(self, s: str, t: str) -> bool:
-        if len(s) != len(t):
-            return False
-        return True if sorted(s) == sorted(t) else False
+def isAnagram(self, s: str, t: str) -> bool:
+    if len(s) != len(t):
+        return False
+    return True if sorted(s) == sorted(t) else False
     
 # Example usage:
-solution = Solution()
-print(solution.isAnagram("racecar", "carrace"))  # Output: True
-print(solution.isAnagram("jar", "jam"))          # Output: False
+print(isAnagram("racecar", "carrace"))  # Output: True
+print(isAnagram("jar", "jam"))          # Output: False

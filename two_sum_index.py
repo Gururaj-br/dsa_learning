@@ -38,21 +38,19 @@ You should aim for a solution with O(n) time and O(n) space, where n is the size
 
 '''
 
-class Solution:
-    def twoSum(self, nums: list[int], target: int):
-        hash_m = {}
+def twoSum(self, nums: list[int], target: int):
+    hash_m = {}
 
-        for i , n in enumerate(nums):
-            hash_m[n] = i
-        
-        for i , n in enumerate(nums):
-            diff = target - n
-            if diff in hash_m and hash_m[diff] != i:
-                return [i , hash_m[diff]]
-        return []
+    for i , n in enumerate(nums):
+        hash_m[n] = i
+    
+    for i , n in enumerate(nums):
+        diff = target - n
+        if diff in hash_m and hash_m[diff] != i:
+            return [i , hash_m[diff]]
+    return []
 
 # Example usage:
-solution = Solution()
-print(solution.twoSum([3,4,5,6], 7))  # Output : [0,1]
-print(solution.twoSum([4,5,6], 10))    # Output : [0,2]
-print(solution.twoSum([5,5], 10))      # Output : [0,1]
+print(twoSum([3,4,5,6], 7))  # Output : [0,1]
+print(twoSum([4,5,6], 10))    # Output : [0,2]
+print(twoSum([5,5], 10))      # Output : [0,1]
