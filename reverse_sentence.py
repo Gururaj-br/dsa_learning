@@ -1,5 +1,5 @@
 s = "python is easy language"
-
+print(s.split(' ')[::-1])
 output = []
 
 temp_ch = ""

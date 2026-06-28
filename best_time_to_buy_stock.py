@@ -35,11 +35,13 @@ def maxProfit(prices):
     profit = 0
 
     for price in prices:
-        if price < min_price:
-            min_price = price
+        # if price < min_price:
+        #     min_price = price
+        min_price = min(price, min_price)
         current_profit = price - min_price
-        if profit < current_profit:
-            profit = current_profit
+        # if profit < current_profit:
+        #     profit = current_profit
+        profit = max(profit, current_profit)
     return profit
 
 # Example usage:
